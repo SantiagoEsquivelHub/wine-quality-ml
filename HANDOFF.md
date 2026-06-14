@@ -3,7 +3,7 @@
 > Documento vivo. Se actualiza al cerrar cada fase. Sirve para retomar el trabajo
 > en cualquier momento sin perder contexto.
 
-**Última actualización:** Los 4 notebooks (01–04) ejecutados; 13 figuras generadas.
+**Última actualización:** Informe escrito redactado; repo Git inicializado.
 
 ---
 
@@ -28,10 +28,10 @@
 | **3** | Modelos supervisados (LogReg, RF, Red Neuronal) + evaluación | ✅ | ✅ | `models/*.pkl`, `models/nn_model.h5`, `models/scaler.pkl`, figuras |
 | **4** | App Streamlit | ✅ | ✅ | `models/label_mapping.json` (consume artefactos) |
 | Notebooks | `01`–`04` completos | ✅ | ✅ | 13 figuras en `reports/figures/` |
-| Informe | Documento escrito | ⬜ | — | `reports/informe.pdf` |
-| Video | Demo ≤ 10 min | ⬜ | — | — |
+| Informe | Documento escrito | ✅ | — | `reports/informe.md` (falta exportar a PDF + nombres) |
+| Video | Demo ≤ 10 min | 🟡 | — | guion en `reports/video_script.md` (falta grabar) |
 
-**Avance global estimado:** ~93% (código + notebooks + figuras listos).
+**Avance global estimado:** ~97% (código + notebooks + figuras + informe + guion).
 
 ### Figuras generadas (reports/figures/) — 13 en total
 - EDA (6): wine_type_counts, histograms, correlation, quality_distribution,
@@ -131,13 +131,11 @@
 
 ## 5. Próximo paso
 
-➡️ **Redactar el informe escrito.** Toda la base está lista: usar la sección 3
-(decisiones) como metodología, la sección 4 (resultados) para las tablas, y las 11
-figuras de `reports/figures/`. Estructura mínima del informe en el plan original.
-
-Pendientes finales:
-- Informe escrito (PDF en `reports/`).
-- Video ≤10 min (guion por tiempos en el plan original).
+➡️ **Tareas finales del equipo (manuales):**
+- Completar los nombres de los integrantes en la portada de `reports/informe.md`.
+- Exportar `informe.md` a PDF (VS Code Markdown PDF, o pegar en Word con las figuras).
+- Grabar el video ≤10 min siguiendo `reports/video_script.md` (3 personas, ~3:20 c/u).
+- (Opcional) Publicar el repo en GitHub: `git remote add origin <url>` + `git push`.
 
 ---
 
