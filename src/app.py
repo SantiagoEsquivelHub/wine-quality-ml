@@ -11,7 +11,13 @@ predicted wine profile clearly. Run it with:
 """
 
 import json
+import sys
+import os
 from pathlib import Path
+
+# Ensure src/ is on the path regardless of the working directory or Streamlit reruns.
+sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
+
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -19,13 +25,14 @@ import joblib
 
 from preprocessing import FEATURE_COLUMNS
 
-# Paths to the artifacts produced during training.
-SCALER_PATH = "models/scaler.pkl"
+# Paths to the artifacts produced during training (absolute, relative to repo root).
+_ROOT = Path(__file__).resolve().parent.parent
+SCALER_PATH = str(_ROOT / "models" / "scaler.pkl")
 # Final model chosen in Phase 3: Logistic Regression had the best F1-macro (0.993)
 # and was also the fastest/smallest. Swap to another .pkl to use a different model.
-MODEL_PATH = "models/logreg_model.pkl"
+MODEL_PATH = str(_ROOT / "models" / "logreg_model.pkl")
 # Maps the model's numeric classes (0..k-1) back to readable profile names.
-LABEL_MAP_PATH = "models/label_mapping.json"
+LABEL_MAP_PATH = str(_ROOT / "models" / "label_mapping.json")
 
 # UI ranges per feature: (min, max, default). Taken from the real training data
 # so the user can't enter values the model never saw.

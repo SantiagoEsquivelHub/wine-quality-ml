@@ -9,6 +9,8 @@ is critical: if the app scales the data differently from how the model was train
 the predictions will be wrong.
 """
 
+from __future__ import annotations
+
 from pathlib import Path
 import pandas as pd
 import numpy as np
